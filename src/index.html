@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where's Santa?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+       function setLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+        
+                // Send to server
+                fetch('location.php?guid=8020e13f-73d4-4778-a3be-4c17b179be97', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ latitude, longitude })
+                })
+                .then(response => response.json())
+                .then(data => console.log('Success:', data))
+                .catch(error => console.error('Error:', error));
+            });
+            alert('Location updated');
+        } else {
+            console.error("Geolocation is not supported by this browser.");
+        }
+       }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Update Santa's Location</h1>
+    </header>
+    <main>
+        <p><a href="#" onclick="setLocation()">Update Location</a></p>
+    </main>
+</body>
+</html>
+
