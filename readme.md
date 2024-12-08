@@ -73,7 +73,7 @@ Running the script is very straightforward:
 
 1. download the code/clone the repository
 
-You can read more about how this all works in [this blog post](tbd).
+You can read more about how this all works in [this blog post](https://www.spokenlikeageek.com/2024/12/09/wheres-santa/).
 
 ### Prerequisites
 
@@ -86,11 +86,10 @@ Requirements are very simple, it requires the following:
 
 1. Clone the repo:
    ```sh
-   git clone https://github.com/williamsdb/wheres-santa.git
-   ```
+   git clone https://github.com/williamsdb/wheres-santa.git```
+   
 1. Set write permissions to location.txt. This will depend on your flavour of Linux. On Centos/Almalinux:
-   ```sudo chown apache:apache location.txt
-   ```
+   ```sudo chown apache:apache location.txt```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,7 +98,7 @@ Requirements are very simple, it requires the following:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-_For more information, please refer to the [this blog post](tbd)_
+_For more information, please refer to the [this blog post](https://www.spokenlikeageek.com/2024/12/09/wheres-santa/)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
